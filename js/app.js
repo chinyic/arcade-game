@@ -1,6 +1,5 @@
 // Enemies our player must avoid
-var allEnemies = [];
- 
+
 var Enemy = function() {
     // Variables applied to each of our instances go here,
     // we've provided one for you to get started
@@ -30,6 +29,7 @@ Enemy.prototype.render = function() {
 
 // Now instantiate your objects.
 // Place all enemy objects in an array called allEnemies
+var allEnemies = [];
 // Place the player object in a variable called player
 
 
