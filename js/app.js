@@ -19,7 +19,10 @@ Enemy.prototype.update = function(dt) {
     // You should multiply any movement by the dt parameter
     // which will ensure the game runs at the same speed for
     // all computers.
+    this.x += this.speed * dt;
+    //change x coordinate of enemy multiplied by speed
     // needs a Math function
+
 };
 // insert function for collision if player touches bug
 // reset to beginning
@@ -54,17 +57,17 @@ Player.prototype.render = function() {
 
 //Player handleInput() methods
 Player.prototype.handleInput = function (keyPress) {
-  if (keyPress === 'left') {
+  if (keyPress === 'left' && this.x > 0) {
     player.x -= 10;
-    //player x coordinate
+    //player x coordinate, boundaries of canvas
   }
-  if (keyPress === 'right'){
+  if (keyPress === 'right' && this.x <=400){
     player.x += 10;
   }
-  if (keyPress === 'up'){
+  if (keyPress === 'up' && this.y >0){
     player.y -= 10;
   }
-  if (keyPress === 'down'){
+  if (keyPress === 'down' &&  this.y<420){
     player.y += 10;
   }
   console.log('keyPress: ' + keyPress);
@@ -74,11 +77,8 @@ Player.prototype.handleInput = function (keyPress) {
 // Place all enemy objects in an array called allEnemies
 var allEnemies = [];
 // Place the player object in a variable called player
-var player = new Player (202, 405);
+var player = new Player (210, 420);
 
-//variables for keypress https://stackoverflow.com/questions/23585320/how-to-move-object-with-keyboard-in-javascript
-//addEventListener
-var leftPress = false;
 
 // This listens for key presses and sends the keys to your
 // Player.handleInput() method. You don't need to modify this.
