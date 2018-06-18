@@ -1,12 +1,13 @@
 // Enemies our player must avoid
 
-var Enemy = function(x,y) {
+var Enemy = function(x,y, speed) {
     // Variables applied to each of our instances go here,
     // we've provided one for you to get started
     this.x = x;
     //x on x-axis, y on y-axis
     this.y = y;
     // add speed? this.speed = speed; speed for enemies
+    this.speed = speed;
     // The image/sprite for our enemies, this uses
     // a helper we've provided to easily load images
     this.sprite = 'images/enemy-bug.png';
@@ -32,10 +33,11 @@ Enemy.prototype.render = function() {
 // Now write your own player class
 // This class requires an update(), render() and
 // a handleInput() method.
-var Player = function(x, y) {
+var Player = function(x, y, speed) {
   this.x = x;
   this.y = y;
-  this.player = 'images/char-horn-girl.png';
+  this.speed = speed;
+  this.sprite = 'images/char-horn-girl.png';
 };
 //create player function
 
@@ -46,7 +48,7 @@ Player.prototype.update = function (dt){
 //render player function
 
 Player.prototype.render = function() {
-  ctx.drawImage(Resources.get(this.player), this.x, this.y);
+  ctx.drawImage(Resources.get(this.sprite), this.x, this.y);
 };
 
 //player handleInput() methods
