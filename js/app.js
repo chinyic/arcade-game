@@ -36,7 +36,12 @@ var Player = function(x, y) {
   this.x = x;
   this.y = y;
   this.player = 'images/char-horn-girl.png';
-}
+};
+//create player function
+
+Player.prototype.update = function (dt){
+
+};
 
 
 
