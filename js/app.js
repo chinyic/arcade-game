@@ -75,11 +75,12 @@ Player.prototype.handleInput = function (keyPress) {
 
 // Now instantiate your objects.
 // Place all enemy objects in an array called allEnemies
-var allEnemies = [];
+const enemy1 = new Enemy(-100,60);
+const allEnemies = [enemy1];
 // Place the player object in a variable called player
 var player = new Player (210, 420);
 
-
+allEnemies.push(enemy1);
 // This listens for key presses and sends the keys to your
 // Player.handleInput() method. You don't need to modify this.
 document.addEventListener('keyup', function(e) {
