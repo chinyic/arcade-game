@@ -67,6 +67,7 @@ Player.prototype.handleInput = function (keyPress) {
   if (keyPress === 'down'){
     player.y += 10;
   }
+  console.log('keyPress: ' + keyPress);
 };
 
 // Now instantiate your objects.
