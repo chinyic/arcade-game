@@ -55,7 +55,17 @@ Player.prototype.render = function() {
 //Player handleInput() methods
 Player.prototype.handleInput = function (keyPress) {
   if (keyPress === 'left') {
-    player.x -= player.speed;
+    player.x -= 10;
+    //player x coordinate
+  }
+  if (keyPress === 'right'){
+    player.x += 10;
+  }
+  if (keyPress === 'up'){
+    player.y -= 10;
+  }
+  if (keyPress === 'down'){
+    player.y += 10;
   }
 };
 
@@ -65,6 +75,9 @@ var allEnemies = [];
 // Place the player object in a variable called player
 var player = new Player (202, 405);
 
+//variables for keypress https://stackoverflow.com/questions/23585320/how-to-move-object-with-keyboard-in-javascript
+//addEventListener
+var leftPress = false;
 
 // This listens for key presses and sends the keys to your
 // Player.handleInput() method. You don't need to modify this.
