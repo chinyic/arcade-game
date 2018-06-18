@@ -43,6 +43,13 @@ Player.prototype.update = function (dt){
 
 };
 
+//render player function
+
+Player.prototype.render = function() {
+  ctx.drawImage(Resources.get(this.player), this.x, this.y);
+};
+
+//player handleInput() methods
 
 
 // Now instantiate your objects.
