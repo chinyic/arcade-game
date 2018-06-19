@@ -19,9 +19,12 @@ Enemy.prototype.update = function(dt) {
     // You should multiply any movement by the dt parameter
     // which will ensure the game runs at the same speed for
     // all computers.
+    if(this.x < 550){
+      this.x += this.speed * dt;
 
+    } else {
       this.x = 0;
-    
+    }
     //change x coordinate of enemy multiplied by speed
     // needs a Math function
 
@@ -77,7 +80,7 @@ Player.prototype.handleInput = function (keyPress) {
 
 // Now instantiate your objects.
 // Place all enemy objects in an array called allEnemies
-const enemy1 = new Enemy(-100,60);
+const enemy1 = new Enemy(-100,60, 100);
 const allEnemies = [enemy1];
 // Place the player object in a variable called player
 var player = new Player (210, 420);
