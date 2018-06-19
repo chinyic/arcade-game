@@ -19,7 +19,9 @@ Enemy.prototype.update = function(dt) {
     // You should multiply any movement by the dt parameter
     // which will ensure the game runs at the same speed for
     // all computers.
-    this.x += this.speed * dt;
+
+      this.x = 0;
+    
     //change x coordinate of enemy multiplied by speed
     // needs a Math function
 
