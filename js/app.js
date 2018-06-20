@@ -21,7 +21,7 @@ Enemy.prototype.update = function(dt) {
     // all computers.
     if(this.x < 550){
       this.x += this.speed * dt;
-
+//this.x = this.x + this.speed multiplied by time delta
     } else {
       this.x = 0;
     }
@@ -81,11 +81,13 @@ Player.prototype.handleInput = function (keyPress) {
 // Now instantiate your objects.
 // Place all enemy objects in an array called allEnemies
 const enemy1 = new Enemy(-100,60, 100);
-const allEnemies = [enemy1];
+const enemy2 = new Enemy (-100, 140, 60);
+
+const allEnemies = [enemy1, enemy2];
 // Place the player object in a variable called player
 var player = new Player (210, 420);
 
-allEnemies.push(enemy1);
+allEnemies.push(enemy1, enemy2);
 // This listens for key presses and sends the keys to your
 // Player.handleInput() method. You don't need to modify this.
 document.addEventListener('keyup', function(e) {
