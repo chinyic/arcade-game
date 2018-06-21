@@ -52,6 +52,20 @@ if (5 < 30 &&
     // collision detected!
 }*/
 
+Enemy.prototype.checkCollision = function() {
+  var playerBox = {x: player.x, y: player.y, width: 50, height: 50};
+  var enemyBox = {x: Enemy.x, y: Enemy.y, width: 50, height: 60};
+
+  if (playerBox.x < enemyBox.x + enemyBox.width &&
+      playerBox.x + playerBox.width > enemyBox.x &&
+      playerBox.y < enemyBox.y + enemyBox.height &&
+      playerBox.height + playerBox.y > enemyBox.y) {
+      // collision detected! call collision function
+      this.collisionDetected();
+  }
+};
+
+
 // Draw the enemy on the screen, required method for game
 Enemy.prototype.render = function() {
     ctx.drawImage(Resources.get(this.sprite), this.x, this.y);
