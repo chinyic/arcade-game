@@ -52,9 +52,9 @@ if (5 < 30 &&
     // collision detected!
 }*/
 
-Enemy.prototype.checkCollision = function() {
+Enemy.prototype.checkCollisions = function() {
   var playerBox = {x: player.x, y: player.y, width: 50, height: 50};
-  var enemyBox = {x: Enemy.x, y: Enemy.y, width: 50, height: 60};
+  var enemyBox = {x: this.x, y: this.y, width: 50, height: 60};
 
   if (playerBox.x < enemyBox.x + enemyBox.width &&
       playerBox.x + playerBox.width > enemyBox.x &&
