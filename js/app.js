@@ -65,7 +65,9 @@ Enemy.prototype.checkCollision = function() {
   }
 };
 
-
+Enemy.prototype.collisionDetected = function () {
+  player.charReset();
+}
 // Draw the enemy on the screen, required method for game
 Enemy.prototype.render = function() {
     ctx.drawImage(Resources.get(this.sprite), this.x, this.y);
@@ -82,6 +84,11 @@ var Player = function(x, y, speed) {
 
 };
 //create player function
+Player.prototype.charReset = function () {
+    this.x = 210;
+    this.y = 420;
+
+}
 
 Player.prototype.update = function (dt){
 
