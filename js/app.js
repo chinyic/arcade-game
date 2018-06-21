@@ -84,6 +84,7 @@ var Player = function(x, y, speed) {
 
 };
 //create player function
+//characterreset
 Player.prototype.charReset = function () {
     this.x = 210;
     this.y = 420;
