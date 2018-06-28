@@ -146,9 +146,14 @@ if (this.y <0) {
 
 
 //life points
-var Heart = function() {
+var Heart = function(x,y) {
   this.sprite = 'images/Heart.png';
+  this.x = x;
+  this.y = y;
+};
 
+Heart.prototype.render = function() {
+  ctx.drawImage(Resources.get(this.sprite), this.x, this.y);
 };
 //life points decrease when player collides with bug
 
@@ -161,6 +166,7 @@ const enemy3 = new Enemy (-100, 220, 150);
 const allEnemies = [enemy1, enemy2, enemy3];
 // Place the player object in a variable called player
 var player = new Player (210, 420);
+var heart = new Heart (100, 600);
 
 allEnemies.push(enemy1, enemy2, enemy3);
 // This listens for key presses and sends the keys to your
