@@ -146,7 +146,10 @@ if (this.y <0) {
 
 
 //life points
+var Heart = function() {
+  this.sprite = 'images/Heart.png';
 
+};
 //life points decrease when player collides with bug
 
 
