@@ -132,7 +132,7 @@ if (this.y <0) {
     this.x= 210;
     this.y= 420;
   },800);
-}
+};
 
 //insert Gems for points?
 
