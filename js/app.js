@@ -92,7 +92,7 @@ Player.prototype.charReset = function () {
 }
 
 Player.prototype.update = function (dt){
-  for (var i = 0; i < 2; i++) {
+  for (var i = 0; i < 3; i++) {
             if ((this.x + 68 > allEnemies[i].x) &&
             (this.x < allEnemies[i].x + 68) &&
             (this.y + 68 > allEnemies[i].y) &&
@@ -126,16 +126,23 @@ Player.prototype.handleInput = function (keyPress) {
   console.log('keyPress: ' + keyPress);
 };
 
+//reset player position when reaching top of page
+if (this.y <0) {
+  setTimeout(() =>{
+    this.x= 210;
+    this.y= 420;
+  },800);
+}
 // Now instantiate your objects.
 // Place all enemy objects in an array called allEnemies
 const enemy1 = new Enemy(-100,60, 100);
 const enemy2 = new Enemy (-100, 140, 60);
-
-const allEnemies = [enemy1, enemy2];
+const enemy3 = new Enemy (-100, 220, 150);
+const allEnemies = [enemy1, enemy2, enemy3];
 // Place the player object in a variable called player
 var player = new Player (210, 420);
 
-allEnemies.push(enemy1, enemy2);
+allEnemies.push(enemy1, enemy2, enemy3);
 // This listens for key presses and sends the keys to your
 // Player.handleInput() method. You don't need to modify this.
 document.addEventListener('keyup', function(e) {
