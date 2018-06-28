@@ -133,6 +133,23 @@ if (this.y <0) {
     this.y= 420;
   },800);
 }
+
+//insert Gems for points?
+
+// draw gem on screen
+//gem prototype update -function when player collides with gem
+
+
+//scoreboard
+
+//scoreboard function increase when player collides with Gems
+
+
+//life points
+
+//life points decrease when player collides with bug
+
+
 // Now instantiate your objects.
 // Place all enemy objects in an array called allEnemies
 const enemy1 = new Enemy(-100,60, 100);
