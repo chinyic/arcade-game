@@ -51,7 +51,7 @@ if (5 < 30 &&
     55 > 10) {
     // collision detected!
 }*/
-
+/* this function is not called in engine.js
 Enemy.prototype.checkCollisions = function() {
   var playerBox = {x: player.x, y: player.y, width: 50, height: 50};
   var enemyBox = {x: this.x, y: this.y, width: 50, height: 60};
@@ -64,7 +64,7 @@ Enemy.prototype.checkCollisions = function() {
       this.collisionDetected();
   }
 };
-
+*/
 Enemy.prototype.collisionDetected = function () {
   player.charReset();
 }
@@ -92,7 +92,14 @@ Player.prototype.charReset = function () {
 }
 
 Player.prototype.update = function (dt){
-
+  for (var i = 0; i < 2; i++) {
+            if ((this.x + 68 > allEnemies[i].x) &&
+            (this.x < allEnemies[i].x + 68) &&
+            (this.y + 68 > allEnemies[i].y) &&
+            (this.y < allEnemies[i].y + 68)) {
+                this.charReset();
+            }
+        }
 };
 
 //render player function
