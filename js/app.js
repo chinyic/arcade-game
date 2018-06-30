@@ -134,6 +134,11 @@ if (this.y <0) {
   },800);
 };
 
+//insert timer function
+
+var timer = document.querySelector('.timer');
+
+var Score = document.querySelector('.score');
 //insert Gems for points?
 
 // draw gem on screen
@@ -167,6 +172,7 @@ const allEnemies = [enemy1, enemy2, enemy3];
 // Place the player object in a variable called player
 var player = new Player (210, 420);
 var heart = new Heart (100, 600);
+
 
 allEnemies.push(enemy1, enemy2, enemy3);
 // This listens for key presses and sends the keys to your
