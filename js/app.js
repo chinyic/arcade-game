@@ -126,17 +126,18 @@ Player.prototype.handleInput = function (keyPress) {
     player.y += 60;
   }
   console.log('keyPress: ' + keyPress);
+  if (this.y <=0) {
+    setTimeout(() =>{
+      modal.style.display='block';
+      this.x= 210;
+      this.y= 420;
+    },800);
+
+  };
 };
 
 //reset player position when reaching top of page
-if (this.y <0) {
-  setTimeout(() =>{
-    modal.style.display='block';
-    this.x= 210;
-    this.y= 420;
-  },800);
 
-};
 
 //insert timer function
 
@@ -153,11 +154,11 @@ var timer = document.querySelector('.timer');
 
 
 //scoreboard
-var scoreDiv = document.querySelector('.points');
+var scoreboard = document.querySelector('.points');
 function increaseScore() {
   if (player.y < 10){
     console.log('player reached top');
-    player.score += 100;
+    scoreboard.textContent += 100;
 
   }
 }
