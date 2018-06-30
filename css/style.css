@@ -1,3 +1,6 @@
 body {
     text-align: center;
 }
+#modal-container{
+    display: hidden;
+}

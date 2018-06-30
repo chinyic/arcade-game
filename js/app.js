@@ -73,6 +73,8 @@ Enemy.prototype.render = function() {
     ctx.drawImage(Resources.get(this.sprite), this.x, this.y);
 };
 
+
+var popup = document.querySelector('.modal');
 // Now write your own player class
 // This class requires an update(), render() and
 // a handleInput() method.
@@ -132,13 +134,17 @@ if (this.y <0) {
     this.x= 210;
     this.y= 420;
   },800);
+  popup.style.display='flex';
 };
 
 //insert timer function
 
 var timer = document.querySelector('.timer');
 
-var Score = document.querySelector('.score');
+var scoreDiv = document.querySelector('.score');
+
+
+
 //insert Gems for points?
 
 // draw gem on screen
