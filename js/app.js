@@ -74,7 +74,7 @@ Enemy.prototype.render = function() {
 };
 
 
-var popup = document.querySelector('.modal-popup');
+var modal = document.querySelector('.modal-popup');
 // Now write your own player class
 // This class requires an update(), render() and
 // a handleInput() method.
@@ -131,10 +131,11 @@ Player.prototype.handleInput = function (keyPress) {
 //reset player position when reaching top of page
 if (this.y <0) {
   setTimeout(() =>{
+    modal.style.display='block';
     this.x= 210;
     this.y= 420;
   },800);
-  popup.style.display='flex';
+
 };
 
 //insert timer function
