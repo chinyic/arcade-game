@@ -74,7 +74,7 @@ Enemy.prototype.render = function() {
 };
 
 
-var popup = document.querySelector('.modal');
+var popup = document.querySelector('.modal-popup');
 // Now write your own player class
 // This class requires an update(), render() and
 // a handleInput() method.
