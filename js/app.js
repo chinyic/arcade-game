@@ -142,7 +142,7 @@ if (this.y <0) {
 
 var timer = document.querySelector('.timer');
 
-var scoreDiv = document.querySelector('.score');
+
 
 
 
@@ -153,7 +153,14 @@ var scoreDiv = document.querySelector('.score');
 
 
 //scoreboard
+var scoreDiv = document.querySelector('.points');
+function increaseScore() {
+  if (player.y < 10){
+    console.log('player reached top');
+    player.score += 100;
 
+  }
+}
 //scoreboard function increase when player collides with Gems
 
 
