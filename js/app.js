@@ -115,17 +115,17 @@ Player.prototype.render = function() {
 //Player handleInput() methods
 Player.prototype.handleInput = function (keyPress) {
   if (keyPress === 'left' && this.x > 0) {
-    player.x -= 60;
+    this.x -= 60;
     //player x coordinate, boundaries of canvas
   }
   if (keyPress === 'right' && this.x <=400){
-    player.x += 60;
+    this.x += 60;
   }
   if (keyPress === 'up' && this.y >0){
-    player.y -= 60;
+    this.y -= 60;
   }
   if (keyPress === 'down' &&  this.y<420){
-    player.y += 60;
+    this.y += 60;
   }
   console.log('keyPress: ' + keyPress);
   if (this.y <=0) {
