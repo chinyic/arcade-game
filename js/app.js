@@ -130,7 +130,7 @@ Player.prototype.handleInput = function (keyPress) {
   console.log('keyPress: ' + keyPress);
   if (this.y <=0) {
     setTimeout(() =>{
-      modal.style.display='block';
+      modal.style.display="block";
       this.x= 210;
       this.y= 420;
     },800);
@@ -138,6 +138,16 @@ Player.prototype.handleInput = function (keyPress) {
   };
 };
 
+closeWindow.addEventListener("click",close);
+  function close(){
+  modal.style.display = "none";
+  charReset();
+}
+
+playAgain.onclick = function(){
+    modal.style.display="none";
+    charReset();
+  }
 //reset player position when reaching top of page
 
 

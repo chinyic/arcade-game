@@ -1,12 +1,39 @@
 body {
     text-align: center;
 }
-.modal-popup{
-    display: none;
-    position: fixed; /* Stay in place */
-    z-index: 1; /* Sit on top */
-    left: 0;
-    top: 0;
-    width: 100%; /* Full width */
-    height: 100%; /* Full height */
+
+/*modal popup css*/
+.play-again{
+  display:block;
+  margin:auto;
+}
+
+.close{
+  float:right;
+  cursor: pointer;
+  font-size: 25px;
+}
+
+#modal {
+  display: none;
+  z-index: 1;
+  top: 0;
+  justify-content: center;
+  position: fixed;
+  padding-top: 100px;
+  padding-left: 50px;
+  padding-right: 50px;
+  width: 80%;
+  height:100%;
+  margin:auto;
+}
+
+.modal-content{
+  border: 2px solid;
+  background-color: white;
+  padding: 25px;
+  font-size: 20px;
+  text-align:center;
+  justify-content: center;
+
 }
