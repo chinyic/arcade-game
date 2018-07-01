@@ -75,6 +75,8 @@ Enemy.prototype.render = function() {
 
 
 var modal = document.querySelector('.modal-popup');
+var playAgain = document.querySelector('.play-again');
+var closeWindow = document.querySelector('.close');
 // Now write your own player class
 // This class requires an update(), render() and
 // a handleInput() method.
