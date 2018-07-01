@@ -1,5 +1,5 @@
 # Udacity Arcade Game Clone
-===============================
+
 This is project 3 of the FEND course.
 
 ## Introduction
