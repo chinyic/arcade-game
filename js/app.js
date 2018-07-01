@@ -153,7 +153,6 @@ playAgain.onclick = function(){
 
 //insert timer function
 
-var timer = document.querySelector('.timer');
 
 
 
@@ -187,6 +186,7 @@ var Heart = function(x,y) {
 Heart.prototype.render = function() {
   ctx.drawImage(Resources.get(this.sprite), this.x, this.y);
 };
+
 //life points decrease when player collides with bug
 
 
